@@ -3,7 +3,7 @@ object Hamming {
     val isComparable: Boolean = first.length == second.length
 
     def getHammingDistance: Int = {
-      first.toList.zip(second.toList).filter( x => x._1 != x._2).size
+      first.toList.zip(second.toList).count( x => x._1 != x._2)
     }
 
     isComparable match {
